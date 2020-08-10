@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+
+        var source = new EventSource('/csh102');
+        source.onmessage = function(event) {
+            console.log(JSON.parse(event.data));
+        }
+
+  </script>
+
+	<script>
+
+	vtSource.addEventListener("/listen_for_stream", function(event) {
+	  const newElement = document.createElement("li");
+	  const index = JSON.parse(event.data).index;
+	  newElement.innerHTML = "ping at " + index;
+	  eventList.appendChild(newElement);
+	});
+	</script>
+	<div class="progress" style="width: 50%; margin: 50px;">
+		<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+			<span class="progress-bar-label">test</span>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+
+	<title>House Classification</title>
+  <style>
+  body{
+    font-family: sans-serif;
+  }
+  .button {
+    background-color: LightPink;
+    border: none;
+    color: Black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .animal-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 10px 10px 0px #eee;
+    width: 300px;
+    margin: auto;
+  }
+  </style>
+
+</head>
+
+<body align="center">
+
+  <h2>This is the mock blueprint of a house</h2>
+
+  <form action="/predict_recipe/" method="post">
+
+    <div id='dropdown' class="animal-card" align="center">
+			<label for="houses">Choose a house:</label>
+			<select name="houses" id="cars" onchange='location = this.value'>
+				<option value="csh102">csh102</option>
+				<option value="csh103">csh103</option>
+				<option value="csh104">csh104</option>
+				<option value="csh106">csh106</option>
+				<option value="csh107">csh107</option>
+				<option value="csh109">csh109</option>
+			</select>
+			<br><br>
+			</div>
+			<table id='info_section'>
+				{% for item in items %}
+			    <tr>
+			        <td>{{item.index}}</td>
+			        <td>{{item.true}}</td>
+			        <td>{{item.pred}}</td>
+			        <td>{{item.sensors}}</td>
+			    </tr>
+			{% endfor %}
+			</table>
+
+  </form>
+</body>
+</html>
+<script>
+var targetContainer = document.getElementById("dropdown");
+var eventSource = new EventSource("/<home>");eventSource.addEventListener = (<any_message>, function(e) {
+		targetContainer.innerHTML = e.data;
+
+		if (e.data > 20) {
+				targetContainer.style.color = "red";
+		}
+};
+</script> -->

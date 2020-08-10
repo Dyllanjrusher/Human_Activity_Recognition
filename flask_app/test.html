@@ -1,0 +1,20 @@
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    $("p").click(function(){
+    // action goes here!!
+  });
+
+  //fading
+  $("button").click(function(){
+  $("#div1").fadeIn();
+  $("#div2").fadeIn("slow");
+  $("#div3").fadeIn(3000);
+});
+
+//can chain methods
+$("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+
+//text() - Sets or returns the text content of selected elements
+//html() - Sets or returns the content of selected elements (including HTML markup)
+//val() - Sets or returns the value of form fields
+</head>
